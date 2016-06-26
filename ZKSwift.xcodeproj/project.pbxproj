@@ -15,6 +15,7 @@
 		3944E9911D1A3A660052EF6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3944E98F1D1A3A660052EF6C /* LaunchScreen.storyboard */; };
 		3944E99C1D1A3A660052EF6C /* ZKSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3944E99B1D1A3A660052EF6C /* ZKSwiftTests.swift */; };
 		3944E9A71D1A3A660052EF6C /* ZKSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3944E9A61D1A3A660052EF6C /* ZKSwiftUITests.swift */; };
+		395035C71D1F981F0075AFBA /* ZKTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395035C61D1F981F0075AFBA /* ZKTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3944E9A21D1A3A660052EF6C /* ZKSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZKSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3944E9A61D1A3A660052EF6C /* ZKSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZKSwiftUITests.swift; sourceTree = "<group>"; };
 		3944E9A81D1A3A660052EF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		395035C61D1F981F0075AFBA /* ZKTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKTableViewController.swift; sourceTree = "<group>"; };
 		69A3BACB18445C2F11463FCF /* Pods-ZKSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		7A8BF654F83CB7B0135E5214 /* Pods_ZKSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZKSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				3944E98D1D1A3A660052EF6C /* Assets.xcassets */,
 				3944E98F1D1A3A660052EF6C /* LaunchScreen.storyboard */,
 				3944E9921D1A3A660052EF6C /* Info.plist */,
+				395035C61D1F981F0075AFBA /* ZKTableViewController.swift */,
 			);
 			path = ZKSwift;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				3944E9811D1A3A660052EF6C /* Resources */,
 				FD814991A0255AA3F7283AB3 /* [CP] Embed Pods Frameworks */,
 				4B064F1FA9D71DAB8D780E7B /* [CP] Copy Pods Resources */,
+				5B413D97AA19DE3C75518622 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +298,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5B413D97AA19DE3C75518622 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		843236CDB78997D1960604EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3944E9891D1A3A660052EF6C /* ViewController.swift in Sources */,
+				395035C71D1F981F0075AFBA /* ZKTableViewController.swift in Sources */,
 				3944E9871D1A3A660052EF6C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZKSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZKSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -490,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZKSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZKSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";

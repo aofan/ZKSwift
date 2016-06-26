@@ -6,5 +6,6 @@ use_frameworks!
 target:ZKSwift do
 
     pod 'SwiftyJSON'
+    pod 'Alamofire', '~> 3.4'
 
 end
