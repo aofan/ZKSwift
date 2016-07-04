@@ -7,18 +7,35 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import D3Model
 
-class ZKTableViewController: UITableViewController {
+class ZKTableViewController: ZKBaseTableViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad();
+        self.baseDataHandler = ZKInformationHandler();
+        loadListRequest();
+    }
+    
+    override func loadListRequest() {
+        let urlString = "http://news.jrj.com.cn/json/itougu/getIndexNews";
+        
+        let parameters = ["data":"null","size":"10","d":"b"];
+        
+        [self.baseDataHandler! .alamofireBaseHandler(loadFinish,urlString: urlString, parameters: parameters)];
+    }
     
     
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+    func loadFinish(){
+        self.dataArray = self.baseDataHandler?.dataArray;
+        self.tableView.reloadData();
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell();
-        cell.textLabel?.text = "lidan";
+        cell.textLabel?.text = (self.dataArray![indexPath.row] as! ZKInformationModel).title;
         return cell;
     }
 

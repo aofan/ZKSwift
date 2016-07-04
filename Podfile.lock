@@ -1,13 +1,18 @@
 PODS:
   - Alamofire (3.4.1)
+  - D3Model (2.0.3)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - D3Model (~> 2.0.3)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  D3Model: c82b45de2df793bc5c6906dfb74955eb8aa9e3e9
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: f5a8e4effccd7e543901a6c8348dd111e12284b3
+
+COCOAPODS: 1.0.1

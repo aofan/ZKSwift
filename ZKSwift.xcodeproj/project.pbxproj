@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2421BFF4FB7C082570DCEB7D /* Pods_ZKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8BF654F83CB7B0135E5214 /* Pods_ZKSwift.framework */; };
+		392636A51D2A32AD004ABA72 /* ZKInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636A41D2A32AD004ABA72 /* ZKInformationModel.swift */; };
+		392636A71D2A3508004ABA72 /* ZKBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636A61D2A3508004ABA72 /* ZKBaseModel.swift */; };
+		392636A91D2A3E06004ABA72 /* ZKStockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636A81D2A3E06004ABA72 /* ZKStockModel.swift */; };
+		392636AB1D2A56D8004ABA72 /* ZKInformationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */; };
+		392636AD1D2A6080004ABA72 /* ZKBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */; };
 		3944E9871D1A3A660052EF6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3944E9861D1A3A660052EF6C /* AppDelegate.swift */; };
 		3944E9891D1A3A660052EF6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3944E9881D1A3A660052EF6C /* ViewController.swift */; };
 		3944E98C1D1A3A660052EF6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3944E98A1D1A3A660052EF6C /* Main.storyboard */; };
@@ -16,6 +20,8 @@
 		3944E99C1D1A3A660052EF6C /* ZKSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3944E99B1D1A3A660052EF6C /* ZKSwiftTests.swift */; };
 		3944E9A71D1A3A660052EF6C /* ZKSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3944E9A61D1A3A660052EF6C /* ZKSwiftUITests.swift */; };
 		395035C71D1F981F0075AFBA /* ZKTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395035C61D1F981F0075AFBA /* ZKTableViewController.swift */; };
+		39637D7F1D2A02C5002C1CCB /* ZKAlamofireHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */; };
+		400714F823A06DBE48525FCE /* Pods_ZKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD09AA764F43BB9CE3895904 /* Pods_ZKSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E563A40BAF1C07B1EEB8406 /* Pods-ZKSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift.release.xcconfig"; sourceTree = "<group>"; };
+		09397E852EFEFBA912DABBC2 /* Pods-ZKSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift.release.xcconfig"; sourceTree = "<group>"; };
+		392636A41D2A32AD004ABA72 /* ZKInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKInformationModel.swift; sourceTree = "<group>"; };
+		392636A61D2A3508004ABA72 /* ZKBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseModel.swift; sourceTree = "<group>"; };
+		392636A81D2A3E06004ABA72 /* ZKStockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZKStockModel.swift; path = ../ZKStockModel.swift; sourceTree = "<group>"; };
+		392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKInformationHandler.swift; sourceTree = "<group>"; };
+		392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseTableViewController.swift; sourceTree = "<group>"; };
 		3944E9831D1A3A660052EF6C /* ZKSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3944E9861D1A3A660052EF6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3944E9881D1A3A660052EF6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,8 +62,9 @@
 		3944E9A61D1A3A660052EF6C /* ZKSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZKSwiftUITests.swift; sourceTree = "<group>"; };
 		3944E9A81D1A3A660052EF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		395035C61D1F981F0075AFBA /* ZKTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKTableViewController.swift; sourceTree = "<group>"; };
-		69A3BACB18445C2F11463FCF /* Pods-ZKSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		7A8BF654F83CB7B0135E5214 /* Pods_ZKSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZKSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKAlamofireHandler.swift; sourceTree = "<group>"; };
+		F14F712CC8B305E7D6175725 /* Pods-ZKSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		FD09AA764F43BB9CE3895904 /* Pods_ZKSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZKSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2421BFF4FB7C082570DCEB7D /* Pods_ZKSwift.framework in Frameworks */,
+				400714F823A06DBE48525FCE /* Pods_ZKSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25CFF372B06BA11E94674BBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F14F712CC8B305E7D6175725 /* Pods-ZKSwift.debug.xcconfig */,
+				09397E852EFEFBA912DABBC2 /* Pods-ZKSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3944E97A1D1A3A660052EF6C = {
 			isa = PBXGroup;
 			children = (
@@ -88,8 +109,8 @@
 				3944E99A1D1A3A660052EF6C /* ZKSwiftTests */,
 				3944E9A51D1A3A660052EF6C /* ZKSwiftUITests */,
 				3944E9841D1A3A660052EF6C /* Products */,
-				53FDA302DFCC628CC975C8C3 /* Pods */,
-				B3629A6CF8D02DEAD099382A /* Frameworks */,
+				25CFF372B06BA11E94674BBE /* Pods */,
+				A0E583CE9229E1D1819463E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,12 +127,15 @@
 		3944E9851D1A3A660052EF6C /* ZKSwift */ = {
 			isa = PBXGroup;
 			children = (
+				39637D791D2A0009002C1CCB /* base */,
 				3944E9861D1A3A660052EF6C /* AppDelegate.swift */,
 				3944E9881D1A3A660052EF6C /* ViewController.swift */,
 				3944E98A1D1A3A660052EF6C /* Main.storyboard */,
 				3944E98D1D1A3A660052EF6C /* Assets.xcassets */,
 				3944E98F1D1A3A660052EF6C /* LaunchScreen.storyboard */,
 				3944E9921D1A3A660052EF6C /* Info.plist */,
+				392636A81D2A3E06004ABA72 /* ZKStockModel.swift */,
+				392636A41D2A32AD004ABA72 /* ZKInformationModel.swift */,
 				395035C61D1F981F0075AFBA /* ZKTableViewController.swift */,
 			);
 			path = ZKSwift;
@@ -135,19 +159,61 @@
 			path = ZKSwiftUITests;
 			sourceTree = "<group>";
 		};
-		53FDA302DFCC628CC975C8C3 /* Pods */ = {
+		39637D781D29FFC2002C1CCB /* baseHandler */ = {
 			isa = PBXGroup;
 			children = (
-				69A3BACB18445C2F11463FCF /* Pods-ZKSwift.debug.xcconfig */,
-				1E563A40BAF1C07B1EEB8406 /* Pods-ZKSwift.release.xcconfig */,
+				39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */,
+				392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */,
 			);
-			name = Pods;
+			name = baseHandler;
 			sourceTree = "<group>";
 		};
-		B3629A6CF8D02DEAD099382A /* Frameworks */ = {
+		39637D791D2A0009002C1CCB /* base */ = {
 			isa = PBXGroup;
 			children = (
-				7A8BF654F83CB7B0135E5214 /* Pods_ZKSwift.framework */,
+				39637D7D1D2A0042002C1CCB /* baseOther */,
+				39637D7C1D2A0037002C1CCB /* baseController */,
+				39637D7B1D2A0020002C1CCB /* baseModel */,
+				39637D7A1D2A0014002C1CCB /* baseView */,
+				39637D781D29FFC2002C1CCB /* baseHandler */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
+		39637D7A1D2A0014002C1CCB /* baseView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = baseView;
+			sourceTree = "<group>";
+		};
+		39637D7B1D2A0020002C1CCB /* baseModel */ = {
+			isa = PBXGroup;
+			children = (
+				392636A61D2A3508004ABA72 /* ZKBaseModel.swift */,
+			);
+			name = baseModel;
+			sourceTree = "<group>";
+		};
+		39637D7C1D2A0037002C1CCB /* baseController */ = {
+			isa = PBXGroup;
+			children = (
+				392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */,
+			);
+			name = baseController;
+			sourceTree = "<group>";
+		};
+		39637D7D1D2A0042002C1CCB /* baseOther */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = baseOther;
+			sourceTree = "<group>";
+		};
+		A0E583CE9229E1D1819463E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD09AA764F43BB9CE3895904 /* Pods_ZKSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,7 +231,6 @@
 				3944E9811D1A3A660052EF6C /* Resources */,
 				FD814991A0255AA3F7283AB3 /* [CP] Embed Pods Frameworks */,
 				4B064F1FA9D71DAB8D780E7B /* [CP] Copy Pods Resources */,
-				5B413D97AA19DE3C75518622 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,21 +363,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5B413D97AA19DE3C75518622 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		843236CDB78997D1960604EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,7 +402,13 @@
 			files = (
 				3944E9891D1A3A660052EF6C /* ViewController.swift in Sources */,
 				395035C71D1F981F0075AFBA /* ZKTableViewController.swift in Sources */,
+				392636AD1D2A6080004ABA72 /* ZKBaseTableViewController.swift in Sources */,
+				39637D7F1D2A02C5002C1CCB /* ZKAlamofireHandler.swift in Sources */,
+				392636A51D2A32AD004ABA72 /* ZKInformationModel.swift in Sources */,
 				3944E9871D1A3A660052EF6C /* AppDelegate.swift in Sources */,
+				392636A91D2A3E06004ABA72 /* ZKStockModel.swift in Sources */,
+				392636AB1D2A56D8004ABA72 /* ZKInformationHandler.swift in Sources */,
+				392636A71D2A3508004ABA72 /* ZKBaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,12 +550,22 @@
 		};
 		3944E9AC1D1A3A660052EF6C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69A3BACB18445C2F11463FCF /* Pods-ZKSwift.debug.xcconfig */;
+			baseConfigurationReference = F14F712CC8B305E7D6175725 /* Pods-ZKSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZKSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"D3Model\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"\"-all_load\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZKSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -507,12 +573,22 @@
 		};
 		3944E9AD1D1A3A660052EF6C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E563A40BAF1C07B1EEB8406 /* Pods-ZKSwift.release.xcconfig */;
+			baseConfigurationReference = 09397E852EFEFBA912DABBC2 /* Pods-ZKSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZKSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"D3Model\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"\"-all_load\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZKSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

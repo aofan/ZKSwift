@@ -7,5 +7,6 @@ target:ZKSwift do
 
     pod 'SwiftyJSON'
     pod 'Alamofire', '~> 3.4'
+    pod 'D3Model', '~> 2.0.3'
 
 end
