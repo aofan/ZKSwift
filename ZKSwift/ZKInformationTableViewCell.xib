@@ -14,20 +14,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是怎么谁是嗲的哈多好哇哦大大来的娃都好？？？？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-Ay-FFo">
-                        <rect key="frame" x="8" y="8" width="307" height="20.5"/>
+                        <rect key="frame" x="8" y="8" width="306" height="41"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bth-BX-NWz">
+                        <rect key="frame" x="8" y="64" width="46" height="30"/>
+                        <color key="backgroundColor" red="0.75294117650000003" green="0.086274509799999996" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="eb9-JV-ZTK"/>
+                            <constraint firstAttribute="height" constant="30" id="lMy-B0-dO5"/>
+                        </constraints>
+                        <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="按钮"/>
+                        <connections>
+                            <action selector="btnClickHandler:" destination="RCN-ao-oZJ" eventType="touchUpInside" id="Xba-XH-mV9"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="bth-BX-NWz" firstAttribute="top" secondItem="4aS-Ay-FFo" secondAttribute="bottom" constant="15" id="2fY-pG-GHv"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4aS-Ay-FFo" secondAttribute="trailing" constant="8" id="EMb-CJ-oIg"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4aS-Ay-FFo" secondAttribute="bottom" constant="8" id="UfP-bO-Qj5"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bth-BX-NWz" secondAttribute="bottom" constant="8" id="Gp7-dM-muc"/>
+                    <constraint firstItem="bth-BX-NWz" firstAttribute="leading" secondItem="NHo-aM-jP8" secondAttribute="leading" constant="8" id="Zlb-v5-WnJ"/>
                     <constraint firstItem="4aS-Ay-FFo" firstAttribute="top" secondItem="NHo-aM-jP8" secondAttribute="top" constant="8" id="pNS-cc-BZg"/>
                     <constraint firstItem="4aS-Ay-FFo" firstAttribute="leading" secondItem="NHo-aM-jP8" secondAttribute="leading" constant="8" id="vUz-48-7AD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnView" destination="bth-BX-NWz" id="QCb-Yl-W7f"/>
                 <outlet property="titleView" destination="4aS-Ay-FFo" id="nti-XM-5ZY"/>
             </connections>
             <point key="canvasLocation" x="449.5" y="275.5"/>

@@ -71,9 +71,48 @@ class ZKBaseTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var baseModel : ZKBaseModel?;
-        var cell : ZKBaseTableViewCell?;
+        let baseModel : ZKBaseModel? = self.indexPathForSource(indexPath);
         
+        return self.indexPathWithSourceForCell(indexPath, baseModel: baseModel);
+        
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.didSelectCell(self.indexPathForSource(indexPath));
+        
+    }
+    
+    /**
+     cell 的整体点击事件  子类要想响应点击事件必须掉用此方法
+     
+     - parameter source: 数据模型
+     */
+    func didSelectCell( source : ZKBaseModel ) {
+        self.cellEventHandler(source);
+    }
+    /**
+     cell 的事件处理  子类用到时候需要重写
+     
+     - parameter source:    数据模型
+     - parameter cell:      发生事件的cell
+     - parameter target:    区分同一个cell上的不同事件的标志
+     - parameter indexPath: 索引
+     */
+    func cellEventHandler( source : ZKBaseModel, cell : ZKBaseTableViewCell? = nil, target : AnyObject? = nil, indexPath : NSIndexPath? = nil ){
+        
+    }
+    
+    /**
+     获取cell对应的模型
+     
+     - parameter indexPath: 索引
+     
+     - returns: 数据模型
+     */
+    private func indexPathForSource( indexPath : NSIndexPath) -> ZKBaseModel{
+        
+        var baseModel : ZKBaseModel?;
         //是否分组来处理数据源
         if self.isGroup {
             baseModel = self.dataArray![indexPath.section][indexPath.row] as? ZKBaseModel;
@@ -81,6 +120,20 @@ class ZKBaseTableViewController: UITableViewController {
             baseModel = self.dataArray![indexPath.row] as? ZKBaseModel;
         }
         
+        return baseModel!;
+    }
+    
+    /**
+     根据数据模型和索引创建对应的cell
+     
+     - parameter indexPath: 索引
+     - parameter baseModel: 数据模型
+     
+     - returns: cell
+     */
+    private func indexPathWithSourceForCell( indexPath : NSIndexPath, baseModel : ZKBaseModel?) -> ZKBaseTableViewCell{
+    
+        var cell : ZKBaseTableViewCell?;
         let reuseIdentifier = String(baseModel!.cellClass!);
         
         //是否加载xib 处理展示的cell
@@ -103,10 +156,9 @@ class ZKBaseTableViewController: UITableViewController {
             }
         }
         
-        
         cell!.source = baseModel;
-        
+        cell!.indexPath = indexPath;
+        cell?.cellEventHandler = cellEventHandler;
         return cell!;
-        
     }
 }

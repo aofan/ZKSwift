@@ -31,6 +31,11 @@ class ZKTableViewController: ZKEstimatedTableViewController {
         self.tableView.reloadData();
     }
     
+    override func cellEventHandler(source: ZKBaseModel, cell: ZKBaseTableViewCell?, target: AnyObject?, indexPath: NSIndexPath?) {
+        let model = source as! ZKInformationModel;
+        print(model.listdate)
+    }
+    
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10;
     }

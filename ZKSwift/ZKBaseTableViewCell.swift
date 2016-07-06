@@ -9,13 +9,23 @@
 import UIKit
 
 class ZKBaseTableViewCell: UITableViewCell {
-    
+    /// 数据模型
     var source:AnyObject?{
         didSet
         {
             self.updateSourceForCell(source!);
         }
     }
+    
+    /// 索引
+    var indexPath : NSIndexPath?;
+    
+    /// cell的事件处理
+    typealias cellFunc = ( source : ZKBaseModel, cell : ZKBaseTableViewCell? , target : AnyObject? , indexPath : NSIndexPath? ) -> Void;
+    
+    var cellEventHandler:cellFunc?;
+    
+    
 
     required override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
