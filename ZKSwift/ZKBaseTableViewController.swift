@@ -72,22 +72,39 @@ class ZKBaseTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var baseModel : ZKBaseModel?;
+        var cell : ZKBaseTableViewCell?;
         
+        //是否分组来处理数据源
         if self.isGroup {
             baseModel = self.dataArray![indexPath.section][indexPath.row] as? ZKBaseModel;
         }else{
             baseModel = self.dataArray![indexPath.row] as? ZKBaseModel;
         }
         
-        let type = baseModel!.cellClass as! ZKBaseTableViewCell.Type;
+        let reuseIdentifier = String(baseModel!.cellClass!);
         
-        //对于Cell复用的处理
-        var cell = tableView.dequeueReusableCellWithIdentifier( NSStringFromClass(baseModel!.cellClass!)) as? ZKBaseTableViewCell;
-        if cell == nil {
-            cell = type.init(style:UITableViewCellStyle.Default, reuseIdentifier: NSStringFromClass(baseModel!.cellClass!));
+        //是否加载xib 处理展示的cell
+        if baseModel?.isloadNib == true {
+            
+            let nib = UINib.init( nibName: reuseIdentifier, bundle:NSBundle.mainBundle());
+            
+            tableView.registerNib( nib, forCellReuseIdentifier: reuseIdentifier );
+            
+            cell = tableView.dequeueReusableCellWithIdentifier( reuseIdentifier, forIndexPath: indexPath ) as? ZKBaseTableViewCell;
+            
+        }else{
+            
+            let type = baseModel!.cellClass as! ZKBaseTableViewCell.Type;
+            
+            //对于Cell复用的处理
+            cell = tableView.dequeueReusableCellWithIdentifier( reuseIdentifier ) as? ZKBaseTableViewCell;
+            if cell == nil {
+                cell = type.init( style:UITableViewCellStyle.Default, reuseIdentifier: reuseIdentifier );
+            }
         }
         
-        cell!.updateSourceForCell(baseModel!);
+        
+        cell!.source = baseModel;
         
         return cell!;
         

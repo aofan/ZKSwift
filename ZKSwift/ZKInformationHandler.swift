@@ -21,6 +21,7 @@ class ZKInformationHandler: ZKAlamofireHandler {
         
         for ifo in infor {
             ifo.cellClass = ZKInformationTableViewCell.self;
+            ifo.isloadNib = true;
             tempA.append([ifo]);
         }
         

@@ -13,4 +13,7 @@ import D3Model
 class ZKBaseModel:  D3Model{
     /// 模型对应的cell展示类
     var cellClass : AnyClass?;
+    /// 是否加载xib
+    var isloadNib = false;
+    
 }

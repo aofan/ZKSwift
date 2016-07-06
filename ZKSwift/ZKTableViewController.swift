@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZKTableViewController: ZKBaseTableViewController {
+class ZKTableViewController: ZKEstimatedTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();

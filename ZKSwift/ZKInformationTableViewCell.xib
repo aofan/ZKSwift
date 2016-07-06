@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="RCN-ao-oZJ" customClass="ZKInformationTableViewCell" customModule="ZKSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="139"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RCN-ao-oZJ" id="NHo-aM-jP8">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="138.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是怎么谁是嗲的哈多好哇哦大大来的娃都好？？？？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-Ay-FFo">
+                        <rect key="frame" x="8" y="8" width="307" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4aS-Ay-FFo" secondAttribute="trailing" constant="8" id="EMb-CJ-oIg"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4aS-Ay-FFo" secondAttribute="bottom" constant="8" id="UfP-bO-Qj5"/>
+                    <constraint firstItem="4aS-Ay-FFo" firstAttribute="top" secondItem="NHo-aM-jP8" secondAttribute="top" constant="8" id="pNS-cc-BZg"/>
+                    <constraint firstItem="4aS-Ay-FFo" firstAttribute="leading" secondItem="NHo-aM-jP8" secondAttribute="leading" constant="8" id="vUz-48-7AD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleView" destination="4aS-Ay-FFo" id="nti-XM-5ZY"/>
+            </connections>
+            <point key="canvasLocation" x="449.5" y="275.5"/>
+        </tableViewCell>
+    </objects>
+</document>

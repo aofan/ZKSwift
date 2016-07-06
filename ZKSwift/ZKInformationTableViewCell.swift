@@ -10,9 +10,11 @@ import UIKit
 
 class ZKInformationTableViewCell:  ZKBaseTableViewCell{
     
+    @IBOutlet weak var titleView: UILabel!
+    
     override func updateSourceForCell(source: AnyObject) {
         let infor = source as! ZKInformationModel;
-        self.textLabel?.text = infor.title;
+        self.titleView.text = infor.title;
     }
 
 }
