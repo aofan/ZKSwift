@@ -17,10 +17,16 @@ class ZKInformationHandler: ZKAlamofireHandler {
         
         let infor = ZKInformationModel.jsonToModelList( data ) as! Array<ZKInformationModel>
         
+        var tempA : Array<AnyObject> = Array();
+        
+        for ifo in infor {
+            ifo.cellClass = ZKInformationTableViewCell.self;
+            tempA.append([ifo]);
+        }
         
         print("JSON:\(infor)");
         
-        return infor;
+        return tempA;
     }
 
 }

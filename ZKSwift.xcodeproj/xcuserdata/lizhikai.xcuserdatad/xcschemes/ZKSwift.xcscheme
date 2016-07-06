@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B578A59006D979E8275F3A183FFE55E6"
+               BlueprintIdentifier = "EA411DD419452D67E121EA2BE2DB06E7"
                BuildableName = "Pods_ZKSwift.framework"
                BlueprintName = "Pods-ZKSwift"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -96,6 +96,16 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
+         <AdditionalOption
+            key = "MallocStackLogging"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction

@@ -11,5 +11,6 @@ import D3Model
 
 @objc(ZKBaseModel)
 class ZKBaseModel:  D3Model{
-
+    /// 模型对应的cell展示类
+    var cellClass : AnyClass?;
 }

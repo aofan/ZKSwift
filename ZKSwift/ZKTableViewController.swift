@@ -7,14 +7,12 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import D3Model
 
 class ZKTableViewController: ZKBaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        self.isGroup = true;
         self.baseDataHandler = ZKInformationHandler();
         loadListRequest();
     }
@@ -24,7 +22,7 @@ class ZKTableViewController: ZKBaseTableViewController {
         
         let parameters = ["data":"null","size":"10","d":"b"];
         
-        [self.baseDataHandler! .alamofireBaseHandler(loadFinish,urlString: urlString, parameters: parameters)];
+        self.baseDataHandler!.alamofireBaseHandler(loadFinish,urlString: urlString, parameters: parameters);
     }
     
     
@@ -33,10 +31,8 @@ class ZKTableViewController: ZKBaseTableViewController {
         self.tableView.reloadData();
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell();
-        cell.textLabel?.text = (self.dataArray![indexPath.row] as! ZKInformationModel).title;
-        return cell;
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10;
     }
 
 }
