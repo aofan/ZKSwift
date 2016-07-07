@@ -10,12 +10,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ZKAlamofireHandler: NSObject {
+class ZKAlamofireHandler: ZKBaseHandler {
     
-    typealias requestFinish = ()->Void;
-    
-    /// 返回的模型数组
-    var dataArray : Array<AnyObject>?;
     
     /**
      网络请求处理
@@ -25,10 +21,12 @@ class ZKAlamofireHandler: NSObject {
      */
     func alamofireBaseHandler( requestfinish : requestFinish?, urlString : String, parameters: [String: AnyObject]? = nil){
     
-        Alamofire.request(.GET, "http://news.jrj.com.cn/json/itougu/getIndexNews?date=(null)&size=10", parameters: ["d":"b"]).responseJSON { (response) in
+        Alamofire.request(.GET, urlString, parameters: parameters).responseJSON { (response) in
             
             switch response.result{
             case .Success:
+                
+                self.requestResult = AlamofireRequestResult.AlamofireRequestSuccess;
                 
                 let value = response.result.value
                 
@@ -40,7 +38,11 @@ class ZKAlamofireHandler: NSObject {
                 
             case .Failure(let error):
                 
-                print(error)
+                self.requestResult = AlamofireRequestResult.AlamofireRequestFail;
+                
+                print(error);
+                
+                requestfinish?();
                 
             }
         }
@@ -60,6 +62,7 @@ class ZKAlamofireHandler: NSObject {
     
 
 }
+
 
 
 

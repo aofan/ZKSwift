@@ -12,6 +12,12 @@
 		392636A91D2A3E06004ABA72 /* ZKStockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636A81D2A3E06004ABA72 /* ZKStockModel.swift */; };
 		392636AB1D2A56D8004ABA72 /* ZKInformationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */; };
 		392636AD1D2A6080004ABA72 /* ZKBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */; };
+		3936411D1D2DED45008A4860 /* ZKBaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3936411C1D2DED45008A4860 /* ZKBaseHandler.swift */; };
+		3936411F1D2DF2C7008A4860 /* ZKStyleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3936411E1D2DF2C7008A4860 /* ZKStyleTableViewController.swift */; };
+		393641211D2DFCF5008A4860 /* ZKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393641201D2DFCF5008A4860 /* ZKBaseViewController.swift */; };
+		393641231D2E06B9008A4860 /* ZKLoadStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393641221D2E06B9008A4860 /* ZKLoadStateView.swift */; };
+		393641251D2E2470008A4860 /* ZKRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393641241D2E2470008A4860 /* ZKRequestTableViewController.swift */; };
+		393641271D2E33FA008A4860 /* ZKBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393641261D2E33FA008A4860 /* ZKBaseView.swift */; };
 		3944E9871D1A3A660052EF6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3944E9861D1A3A660052EF6C /* AppDelegate.swift */; };
 		3944E98E1D1A3A660052EF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3944E98D1D1A3A660052EF6C /* Assets.xcassets */; };
 		3944E9911D1A3A660052EF6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3944E98F1D1A3A660052EF6C /* LaunchScreen.storyboard */; };
@@ -50,6 +56,12 @@
 		392636A81D2A3E06004ABA72 /* ZKStockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZKStockModel.swift; path = ../ZKStockModel.swift; sourceTree = "<group>"; };
 		392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKInformationHandler.swift; sourceTree = "<group>"; };
 		392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseTableViewController.swift; sourceTree = "<group>"; };
+		3936411C1D2DED45008A4860 /* ZKBaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseHandler.swift; sourceTree = "<group>"; };
+		3936411E1D2DF2C7008A4860 /* ZKStyleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKStyleTableViewController.swift; sourceTree = "<group>"; };
+		393641201D2DFCF5008A4860 /* ZKBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseViewController.swift; sourceTree = "<group>"; };
+		393641221D2E06B9008A4860 /* ZKLoadStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKLoadStateView.swift; sourceTree = "<group>"; };
+		393641241D2E2470008A4860 /* ZKRequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKRequestTableViewController.swift; sourceTree = "<group>"; };
+		393641261D2E33FA008A4860 /* ZKBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseView.swift; sourceTree = "<group>"; };
 		3944E9831D1A3A660052EF6C /* ZKSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3944E9861D1A3A660052EF6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3944E98D1D1A3A660052EF6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +174,7 @@
 		39637D781D29FFC2002C1CCB /* baseHandler */ = {
 			isa = PBXGroup;
 			children = (
+				3936411C1D2DED45008A4860 /* ZKBaseHandler.swift */,
 				39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */,
 			);
 			name = baseHandler;
@@ -182,7 +195,9 @@
 		39637D7A1D2A0014002C1CCB /* baseView */ = {
 			isa = PBXGroup;
 			children = (
+				393641261D2E33FA008A4860 /* ZKBaseView.swift */,
 				39560E011D2B57710057A5FF /* ZKBaseTableViewCell.swift */,
+				393641221D2E06B9008A4860 /* ZKLoadStateView.swift */,
 			);
 			name = baseView;
 			sourceTree = "<group>";
@@ -198,7 +213,10 @@
 		39637D7C1D2A0037002C1CCB /* baseController */ = {
 			isa = PBXGroup;
 			children = (
+				393641201D2DFCF5008A4860 /* ZKBaseViewController.swift */,
 				392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */,
+				393641241D2E2470008A4860 /* ZKRequestTableViewController.swift */,
+				3936411E1D2DF2C7008A4860 /* ZKStyleTableViewController.swift */,
 				39C047B71D2CE5570053BD54 /* ZKEstimatedTableViewController.swift */,
 			);
 			name = baseController;
@@ -446,16 +464,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3936411D1D2DED45008A4860 /* ZKBaseHandler.swift in Sources */,
+				393641231D2E06B9008A4860 /* ZKLoadStateView.swift in Sources */,
 				395035C71D1F981F0075AFBA /* ZKTableViewController.swift in Sources */,
+				393641271D2E33FA008A4860 /* ZKBaseView.swift in Sources */,
 				392636AD1D2A6080004ABA72 /* ZKBaseTableViewController.swift in Sources */,
 				39C047B81D2CE5570053BD54 /* ZKEstimatedTableViewController.swift in Sources */,
+				393641211D2DFCF5008A4860 /* ZKBaseViewController.swift in Sources */,
 				39637D7F1D2A02C5002C1CCB /* ZKAlamofireHandler.swift in Sources */,
 				39560E041D2B587E0057A5FF /* ZKInformationTableViewCell.swift in Sources */,
 				392636A51D2A32AD004ABA72 /* ZKInformationModel.swift in Sources */,
 				3944E9871D1A3A660052EF6C /* AppDelegate.swift in Sources */,
+				393641251D2E2470008A4860 /* ZKRequestTableViewController.swift in Sources */,
 				392636A91D2A3E06004ABA72 /* ZKStockModel.swift in Sources */,
 				39560E021D2B57710057A5FF /* ZKBaseTableViewCell.swift in Sources */,
 				392636AB1D2A56D8004ABA72 /* ZKInformationHandler.swift in Sources */,
+				3936411F1D2DF2C7008A4860 /* ZKStyleTableViewController.swift in Sources */,
 				392636A71D2A3508004ABA72 /* ZKBaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

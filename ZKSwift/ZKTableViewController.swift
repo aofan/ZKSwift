@@ -1,4 +1,4 @@
-//
+
 //  ZKTableViewController.swift
 //  ZKSwift
 //
@@ -22,13 +22,13 @@ class ZKTableViewController: ZKEstimatedTableViewController {
         
         let parameters = ["data":"null","size":"10","d":"b"];
         
+        self.isLoading = true;
         self.baseDataHandler!.alamofireBaseHandler(loadFinish,urlString: urlString, parameters: parameters);
     }
     
     
     func loadFinish(){
-        self.dataArray = self.baseDataHandler?.dataArray;
-        self.tableView.reloadData();
+        super.loadAllFinish();
     }
     
     override func cellEventHandler(source: ZKBaseModel, cell: ZKBaseTableViewCell?, target: AnyObject?, indexPath: NSIndexPath?) {

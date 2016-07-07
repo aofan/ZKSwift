@@ -8,7 +8,12 @@
 
 import UIKit
 
-class ZKBaseTableViewCell: UITableViewCell {
+@objc protocol ZKBaseTableViewCellSource{
+    
+    func updateSourceForCell( source : AnyObject);
+}
+
+class ZKBaseTableViewCell: UITableViewCell, ZKBaseTableViewCellSource {
     /// 数据模型
     var source:AnyObject?{
         didSet
@@ -22,7 +27,6 @@ class ZKBaseTableViewCell: UITableViewCell {
     
     /// cell的事件处理
     typealias cellFunc = ( source : ZKBaseModel, cell : ZKBaseTableViewCell? , target : AnyObject? , indexPath : NSIndexPath? ) -> Void;
-    
     var cellEventHandler:cellFunc?;
     
     
@@ -38,8 +42,6 @@ class ZKBaseTableViewCell: UITableViewCell {
     func updateSourceForCell( source : AnyObject){
         
     }
-    
-    
 }
 
 

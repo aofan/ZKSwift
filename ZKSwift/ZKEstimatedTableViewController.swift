@@ -12,7 +12,7 @@
 import UIKit
 
 
-class ZKEstimatedTableViewController:  ZKBaseTableViewController {
+class ZKEstimatedTableViewController:  ZKStyleTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
