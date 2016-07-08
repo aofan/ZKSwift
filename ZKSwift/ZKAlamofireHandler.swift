@@ -19,7 +19,7 @@ class ZKAlamofireHandler: ZKBaseHandler {
      - parameter urlString:  url地址
      - parameter parameters: 参数
      */
-    func alamofireBaseHandler( requestfinish : requestFinish?, urlString : String, parameters: [String: AnyObject]? = nil){
+    func alamofireBaseHandler( requestfinish : requestFinish?, urlString : String, parameters: [String: AnyObject]? = nil, isFirstRequest : Bool = true ){
     
         Alamofire.request(.GET, urlString, parameters: parameters).responseJSON { (response) in
             
@@ -32,8 +32,13 @@ class ZKAlamofireHandler: ZKBaseHandler {
                 
                 let json = JSON(value!);
                 
-                self.dataArray = self.jsonToModel(json);
-                
+                if isFirstRequest == true{
+                    self.dataArray = self.jsonToModel(json);
+                }else{
+                    for tempA in self.jsonToModel(json)!{
+                        self.dataArray?.append(tempA);
+                    }
+                }
                 requestfinish?();
                 
             case .Failure(let error):

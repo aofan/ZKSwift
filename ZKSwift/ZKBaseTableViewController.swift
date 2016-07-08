@@ -16,6 +16,21 @@ class ZKBaseTableViewController: UITableViewController {
     var dataArray : Array<AnyObject>?;
     /// 是否分组
     var isGroup:Bool = false;
+    /// 默认每页10条数据
+    var pageSize = 10;
+    /// 当前页页码
+    var pageNum = 0;
+    /// 是否有数据
+    var isHaveData : Bool!{
+        get{
+            if self.dataArray?.count > 0 {
+                return true;
+            }
+            return false;
+        }
+    }
+    
+    
     
     
     
@@ -23,6 +38,14 @@ class ZKBaseTableViewController: UITableViewController {
      请求数据  要求子类实现
      */
     func loadListRequest(){}
+    /**
+     请求更多数据  要求子类实现
+     */
+    func loadMoreListRequest(){}
+    /**
+     全部加载完成
+     */
+    func loadAllFinish(){}
 
     override func viewDidLoad() {
         super.viewDidLoad()

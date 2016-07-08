@@ -27,9 +27,11 @@
 		39560E021D2B57710057A5FF /* ZKBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39560E011D2B57710057A5FF /* ZKBaseTableViewCell.swift */; };
 		39560E041D2B587E0057A5FF /* ZKInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39560E031D2B587E0057A5FF /* ZKInformationTableViewCell.swift */; };
 		39637D7F1D2A02C5002C1CCB /* ZKAlamofireHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */; };
+		399303B71D2F43810016DB72 /* ZKRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399303B61D2F43810016DB72 /* ZKRefreshTableViewController.swift */; };
+		399303B91D2F83750016DB72 /* ZKRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399303B81D2F83750016DB72 /* ZKRequestModel.swift */; };
 		39C047B61D2CD2560053BD54 /* ZKInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39C047B51D2CD2560053BD54 /* ZKInformationTableViewCell.xib */; };
 		39C047B81D2CE5570053BD54 /* ZKEstimatedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C047B71D2CE5570053BD54 /* ZKEstimatedTableViewController.swift */; };
-		400714F823A06DBE48525FCE /* Pods_ZKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD09AA764F43BB9CE3895904 /* Pods_ZKSwift.framework */; };
+		400714F823A06DBE48525FCE /* Pods_ZKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD09AA764F43BB9CE3895904 /* Pods_ZKSwift.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		39560E011D2B57710057A5FF /* ZKBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseTableViewCell.swift; sourceTree = "<group>"; };
 		39560E031D2B587E0057A5FF /* ZKInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKInformationTableViewCell.swift; sourceTree = "<group>"; };
 		39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKAlamofireHandler.swift; sourceTree = "<group>"; };
+		399303B61D2F43810016DB72 /* ZKRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKRefreshTableViewController.swift; sourceTree = "<group>"; };
+		399303B81D2F83750016DB72 /* ZKRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKRequestModel.swift; sourceTree = "<group>"; };
 		39C047B51D2CD2560053BD54 /* ZKInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKInformationTableViewCell.xib; sourceTree = "<group>"; };
 		39C047B71D2CE5570053BD54 /* ZKEstimatedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKEstimatedTableViewController.swift; sourceTree = "<group>"; };
 		F14F712CC8B305E7D6175725 /* Pods-ZKSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			children = (
 				3936411C1D2DED45008A4860 /* ZKBaseHandler.swift */,
 				39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */,
+				399303B81D2F83750016DB72 /* ZKRequestModel.swift */,
 			);
 			name = baseHandler;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			children = (
 				393641201D2DFCF5008A4860 /* ZKBaseViewController.swift */,
 				392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */,
+				399303B61D2F43810016DB72 /* ZKRefreshTableViewController.swift */,
 				393641241D2E2470008A4860 /* ZKRequestTableViewController.swift */,
 				3936411E1D2DF2C7008A4860 /* ZKStyleTableViewController.swift */,
 				39C047B71D2CE5570053BD54 /* ZKEstimatedTableViewController.swift */,
@@ -472,12 +478,14 @@
 				39C047B81D2CE5570053BD54 /* ZKEstimatedTableViewController.swift in Sources */,
 				393641211D2DFCF5008A4860 /* ZKBaseViewController.swift in Sources */,
 				39637D7F1D2A02C5002C1CCB /* ZKAlamofireHandler.swift in Sources */,
+				399303B71D2F43810016DB72 /* ZKRefreshTableViewController.swift in Sources */,
 				39560E041D2B587E0057A5FF /* ZKInformationTableViewCell.swift in Sources */,
 				392636A51D2A32AD004ABA72 /* ZKInformationModel.swift in Sources */,
 				3944E9871D1A3A660052EF6C /* AppDelegate.swift in Sources */,
 				393641251D2E2470008A4860 /* ZKRequestTableViewController.swift in Sources */,
 				392636A91D2A3E06004ABA72 /* ZKStockModel.swift in Sources */,
 				39560E021D2B57710057A5FF /* ZKBaseTableViewCell.swift in Sources */,
+				399303B91D2F83750016DB72 /* ZKRequestModel.swift in Sources */,
 				392636AB1D2A56D8004ABA72 /* ZKInformationHandler.swift in Sources */,
 				3936411F1D2DF2C7008A4860 /* ZKStyleTableViewController.swift in Sources */,
 				392636A71D2A3508004ABA72 /* ZKBaseModel.swift in Sources */,
@@ -628,7 +636,6 @@
 					"\"D3Model\"",
 					"-framework",
 					"\"SwiftyJSON\"",
-					"\"-all_load\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZKSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,7 +658,6 @@
 					"\"D3Model\"",
 					"-framework",
 					"\"SwiftyJSON\"",
-					"\"-all_load\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZKSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";

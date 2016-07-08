@@ -8,5 +8,7 @@ target:ZKSwift do
     pod 'SwiftyJSON'
     pod 'Alamofire', '~> 3.4'
     pod 'D3Model', '~> 2.0.3'
+    pod 'XWSwiftRefresh', '~> 0.1.9'
+    
 
 end

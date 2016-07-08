@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ZKRequestTableViewController: ZKBaseTableViewController {
+class ZKRequestTableViewController: ZKRefreshTableViewController {
     
     /// 是否正在加载数据
     var isLoading = false{
         didSet{
             if isLoading == true {
-                self.setloadState(LoadState.LoadStateLoading);
+                if self.isHaveData == false {
+                    self.setloadState(LoadState.LoadStateLoading);
+                }
             }else{
                 self.loadStateView.removeFromSuperview();
             }
@@ -41,16 +43,16 @@ class ZKRequestTableViewController: ZKBaseTableViewController {
     /**
      所有的数据都加载完了
      */
-    func loadAllFinish(){
+    override func loadAllFinish(){
+        
+        super.loadAllFinish();
         
         self.isLoading = false;
         if self.baseDataHandler?.requestResult == AlamofireRequestResult.AlamofireRequestSuccess {
             
-            self.dataArray = self.baseDataHandler?.dataArray;
-            
             self.tableView.reloadData();
             
-            if self.dataArray == nil || self.dataArray?.count == 0 {
+            if self.isHaveData == false {
                 self.setloadState(LoadState.LoadStateNoneData);
             }
             
@@ -59,9 +61,12 @@ class ZKRequestTableViewController: ZKBaseTableViewController {
         }
     }
     
+    override func loadListRequest() {
+        self.isLoading = true;
+    }
     
     func loadRequestFail(){
-        if (self.dataArray == nil || self.dataArray?.count == 0) {
+        if (self.isHaveData == false) {
             self.setloadState(LoadState.LoadStateNetworkError);
         }else{
         }
