@@ -18,8 +18,12 @@ class ZKBaseTableViewController: UITableViewController {
     var isGroup:Bool = false;
     /// 默认每页10条数据
     var pageSize = 10;
+    /// 开始页 默认第一页开始的
+    var startPageNum = 1;
     /// 当前页页码
-    var pageNum = 0;
+    var pageNum = 1;
+    /// 是否第一次进行网络请求
+    var isFirstRequest = true;
     /// 是否有数据
     var isHaveData : Bool!{
         get{
@@ -29,9 +33,6 @@ class ZKBaseTableViewController: UITableViewController {
             return false;
         }
     }
-    
-    
-    
     
     
     /**
@@ -46,9 +47,18 @@ class ZKBaseTableViewController: UITableViewController {
      全部加载完成
      */
     func loadAllFinish(){}
+    /**
+     请求成功
+     */
+    func loadRequestSuccess(){}
+    /**
+     请求失败
+     */
+    func loadRequestFail(){}
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pageNum = self.startPageNum;
     }
     
     

@@ -1,21 +1,22 @@
 PODS:
   - Alamofire (3.4.1)
   - D3Model (2.0.3)
+  - SJProgressHUD (0.0.3)
   - SwiftyJSON (2.3.2)
   - XWSwiftRefresh (0.1.9)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - D3Model (~> 2.0.3)
+  - SJProgressHUD
   - SwiftyJSON
   - XWSwiftRefresh (~> 0.1.9)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   D3Model: c82b45de2df793bc5c6906dfb74955eb8aa9e3e9
+  SJProgressHUD: 9a50ce326a27d66ce453200c87dde8691bb1b7a7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   XWSwiftRefresh: 1981ad8f7579da94c94a8e7720803f2579dcde46
 
-PODFILE CHECKSUM: 67ed0b5b6f7856f321fe3093e47dd57c2be10020
-
-COCOAPODS: 1.0.1
+COCOAPODS: 0.39.0

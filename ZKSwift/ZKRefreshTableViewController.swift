@@ -11,13 +11,31 @@ import XWSwiftRefresh
 
 class ZKRefreshTableViewController: ZKBaseTableViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.pageNum = 1;
-        self.tableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(ZKRefreshTableViewController.upPullLoadData));
-        self.tableView.footerView = XWRefreshAutoNormalFooter(target: self, action: #selector(ZKRefreshTableViewController.downPlullLoadData));
+    private var _refreshHeaderView : XWRefreshNormalHeader?;
+    var refreshHeaderView : XWRefreshNormalHeader?{
+        get{
+            if _refreshHeaderView == nil {
+                _refreshHeaderView = XWRefreshNormalHeader(target: self, action: #selector(ZKRefreshTableViewController.upPullLoadData));
+            }
+            return _refreshHeaderView;
+        }
     }
     
+    
+    private var _refreshFooterView : XWRefreshAutoNormalFooter?;
+    var refreshFooterView : XWRefreshAutoNormalFooter?{
+        if _refreshFooterView == nil {
+            _refreshFooterView = XWRefreshAutoNormalFooter(target: self, action: #selector(ZKRefreshTableViewController.downPlullLoadData));
+        }
+        return _refreshFooterView;
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.headerView = refreshHeaderView;
+        self.tableView.footerView = refreshFooterView;
+    }
     
     
     func upPullLoadData(){
@@ -25,25 +43,58 @@ class ZKRefreshTableViewController: ZKBaseTableViewController {
     }
     
     func downPlullLoadData(){
+        print("================================================================================================")
         self.loadMoreListRequest();
     }
     
+    override func loadListRequest() {
+        super.loadListRequest();
+        self.isFirstRequest = true;
+        self.pageNum = self.startPageNum;
+    }
+    
+    override func loadMoreListRequest() {
+        super.loadMoreListRequest();
+        self.isFirstRequest = false;
+    }
     
     override func loadAllFinish(){
-        
-        if self.tableView.headerView?.isRefreshing == true {
-            //停止刷新
-            self.tableView.headerView?.endRefreshing()
+        super.loadAllFinish()
+    }
+    
+    override func loadRequestSuccess() {
+        super.loadRequestSuccess()
+        setTableHFViewState();
+        if self.dataArray?.count < self.pageNum * self.pageSize {
+            //设置foot没有更多数据了
+            refreshFooterView?.noticeNoMoreData();
+        }else{
             //重置footer的状态
-            self.tableView.footerView!.resetNoMoreData();
+            refreshFooterView?.resetNoMoreData();
         }
         
-        if (self.tableView.footerView?.isRefreshing == true) {
+        self.pageNum += 1;
+
+    }
+    
+    override func loadRequestFail(){
+        super.loadRequestFail();
+        setTableHFViewState();
+    }
+    
+    
+    /**
+    设置tableView头部和尾部状态
+    **/
+    func setTableHFViewState(){
+        if refreshHeaderView?.isRefreshing == true {
             //停止刷新
-            self.tableView.footerView?.endRefreshing()
-            if self.dataArray?.count < self.pageNum * self.pageSize + 1 {
-                self.tableView.footerView!.noticeNoMoreData();
-            }
+            refreshHeaderView?.endRefreshing()
+        }
+        
+        if (refreshFooterView?.isRefreshing == true) {
+            //停止刷新
+            refreshFooterView?.endRefreshing()
         }
     }
 }

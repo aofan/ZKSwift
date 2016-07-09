@@ -9,6 +9,7 @@ target:ZKSwift do
     pod 'Alamofire', '~> 3.4'
     pod 'D3Model', '~> 2.0.3'
     pod 'XWSwiftRefresh', '~> 0.1.9'
+    pod 'SJProgressHUD'
     
 
 end

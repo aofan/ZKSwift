@@ -23,6 +23,7 @@ class ZKTableViewController: ZKEstimatedTableViewController {
     }
     
     override func loadMoreListRequest() {
+        super.loadMoreListRequest();
         loadList(false);
     }
     

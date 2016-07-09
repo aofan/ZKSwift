@@ -12,6 +12,7 @@
 		392636A91D2A3E06004ABA72 /* ZKStockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636A81D2A3E06004ABA72 /* ZKStockModel.swift */; };
 		392636AB1D2A56D8004ABA72 /* ZKInformationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */; };
 		392636AD1D2A6080004ABA72 /* ZKBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */; };
+		392814E41D30FDE800C570C4 /* ZKHUDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392814E31D30FDE800C570C4 /* ZKHUDTableViewController.swift */; };
 		3936411D1D2DED45008A4860 /* ZKBaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3936411C1D2DED45008A4860 /* ZKBaseHandler.swift */; };
 		3936411F1D2DF2C7008A4860 /* ZKStyleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3936411E1D2DF2C7008A4860 /* ZKStyleTableViewController.swift */; };
 		393641211D2DFCF5008A4860 /* ZKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393641201D2DFCF5008A4860 /* ZKBaseViewController.swift */; };
@@ -58,6 +59,7 @@
 		392636A81D2A3E06004ABA72 /* ZKStockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZKStockModel.swift; path = ../ZKStockModel.swift; sourceTree = "<group>"; };
 		392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKInformationHandler.swift; sourceTree = "<group>"; };
 		392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseTableViewController.swift; sourceTree = "<group>"; };
+		392814E31D30FDE800C570C4 /* ZKHUDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKHUDTableViewController.swift; sourceTree = "<group>"; };
 		3936411C1D2DED45008A4860 /* ZKBaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseHandler.swift; sourceTree = "<group>"; };
 		3936411E1D2DF2C7008A4860 /* ZKStyleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKStyleTableViewController.swift; sourceTree = "<group>"; };
 		393641201D2DFCF5008A4860 /* ZKBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				393641201D2DFCF5008A4860 /* ZKBaseViewController.swift */,
 				392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */,
 				399303B61D2F43810016DB72 /* ZKRefreshTableViewController.swift */,
+				392814E31D30FDE800C570C4 /* ZKHUDTableViewController.swift */,
 				393641241D2E2470008A4860 /* ZKRequestTableViewController.swift */,
 				3936411E1D2DF2C7008A4860 /* ZKStyleTableViewController.swift */,
 				39C047B71D2CE5570053BD54 /* ZKEstimatedTableViewController.swift */,
@@ -301,6 +304,7 @@
 				3944E9811D1A3A660052EF6C /* Resources */,
 				FD814991A0255AA3F7283AB3 /* [CP] Embed Pods Frameworks */,
 				4B064F1FA9D71DAB8D780E7B /* [CP] Copy Pods Resources */,
+				CFBE05BC56A147A0650FEEFF /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -448,6 +452,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		CFBE05BC56A147A0650FEEFF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZKSwift/Pods-ZKSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD814991A0255AA3F7283AB3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +491,7 @@
 			files = (
 				3936411D1D2DED45008A4860 /* ZKBaseHandler.swift in Sources */,
 				393641231D2E06B9008A4860 /* ZKLoadStateView.swift in Sources */,
+				392814E41D30FDE800C570C4 /* ZKHUDTableViewController.swift in Sources */,
 				395035C71D1F981F0075AFBA /* ZKTableViewController.swift in Sources */,
 				393641271D2E33FA008A4860 /* ZKBaseView.swift in Sources */,
 				392636AD1D2A6080004ABA72 /* ZKBaseTableViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZKRequestTableViewController: ZKRefreshTableViewController {
+class ZKRequestTableViewController: ZKHUDTableViewController {
     
     /// 是否正在加载数据
     var isLoading = false{
@@ -49,7 +49,7 @@ class ZKRequestTableViewController: ZKRefreshTableViewController {
         
         self.isLoading = false;
         if self.baseDataHandler?.requestResult == AlamofireRequestResult.AlamofireRequestSuccess {
-            
+            loadRequestSuccess();
             self.tableView.reloadData();
             
             if self.isHaveData == false {
@@ -62,13 +62,15 @@ class ZKRequestTableViewController: ZKRefreshTableViewController {
     }
     
     override func loadListRequest() {
+        super.loadListRequest();
         self.isLoading = true;
     }
     
-    func loadRequestFail(){
+    override func loadRequestFail(){
         if (self.isHaveData == false) {
             self.setloadState(LoadState.LoadStateNetworkError);
         }else{
+            super.loadRequestFail();
         }
     }
     
