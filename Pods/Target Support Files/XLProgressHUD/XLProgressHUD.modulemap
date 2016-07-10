@@ -1,0 +1,6 @@
+framework module XLProgressHUD {
+  umbrella header "XLProgressHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

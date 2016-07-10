@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F267EC102FA3FF5D89FA1821'
+               BlueprintIdentifier = '04B905218CFE078C49BAC169'
                BlueprintName = 'D3Model'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'D3Model.framework'>

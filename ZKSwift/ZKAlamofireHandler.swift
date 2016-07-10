@@ -19,7 +19,7 @@ class ZKAlamofireHandler: ZKBaseHandler {
      - parameter urlString:  url地址
      - parameter parameters: 参数
      */
-    func alamofireBaseHandler( requestfinish : requestFinish?, urlString : String, parameters: [String: AnyObject]? = nil, isFirstRequest : Bool = true ){
+    func alamofireToJSONHandler( requestfinish : requestFinish?, urlString : String, parameters: [String: AnyObject], isFirstRequest : Bool = true, method : Alamofire.Method = .GET ){
     
         Alamofire.request(.GET, urlString, parameters: parameters).responseJSON { (response) in
             

@@ -67,10 +67,9 @@ class ZKRequestTableViewController: ZKHUDTableViewController {
     }
     
     override func loadRequestFail(){
+        super.loadRequestFail();
         if (self.isHaveData == false) {
             self.setloadState(LoadState.LoadStateNetworkError);
-        }else{
-            super.loadRequestFail();
         }
     }
     

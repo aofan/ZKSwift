@@ -19,20 +19,20 @@ class ZKTableViewController: ZKEstimatedTableViewController {
     
     override func loadListRequest() {
         super.loadListRequest();
-        loadList(true);
+        loadList(self.isFirstRequest);
     }
     
     override func loadMoreListRequest() {
         super.loadMoreListRequest();
-        loadList(false);
+        loadList(self.isFirstRequest);
     }
     
     func loadList(isFirstRequest : Bool){
         let urlString = "http://news.jrj.com.cn/json/itougu/getIndexNews";
         
         let parameters = ["data":"null","size":"10","d":"b"];
-        
-        self.baseDataHandler!.alamofireBaseHandler(loadFinish,urlString: urlString, parameters: parameters, isFirstRequest: isFirstRequest);
+    
+        self.baseDataHandler?.alamofireToJSONHandler( loadFinish, urlString: urlString, parameters: parameters, isFirstRequest: isFirstRequest);
     }
     
     

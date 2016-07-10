@@ -86,14 +86,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ZKSwift/Alamofire.framework"
   install_framework "Pods-ZKSwift/D3Model.framework"
-  install_framework "Pods-ZKSwift/SJProgressHUD.framework"
   install_framework "Pods-ZKSwift/SwiftyJSON.framework"
+  install_framework "Pods-ZKSwift/XLProgressHUD.framework"
   install_framework "Pods-ZKSwift/XWSwiftRefresh.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ZKSwift/Alamofire.framework"
   install_framework "Pods-ZKSwift/D3Model.framework"
-  install_framework "Pods-ZKSwift/SJProgressHUD.framework"
   install_framework "Pods-ZKSwift/SwiftyJSON.framework"
+  install_framework "Pods-ZKSwift/XLProgressHUD.framework"
   install_framework "Pods-ZKSwift/XWSwiftRefresh.framework"
 fi

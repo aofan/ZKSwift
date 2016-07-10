@@ -7,42 +7,59 @@
 //
 
 import UIKit
-import SJProgressHUD
+import XLProgressHUD
 
 class ZKHUDTableViewController: ZKRefreshTableViewController {
+    
+    let center = "center"
+    let top    = "top"
+    let bottom = "bottom"
+    
+    lazy var window : UIWindow? = {
+        return (UIApplication.sharedApplication().delegate?.window)!;
+    }();
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad();
     }
     
-    func showWaiting(text : String, autoRemove : Bool? = false){
-        SJProgressHUD.showWaiting(text, autoRemove: autoRemove!);
+    func showWaiting(text : String, position : String = "center"){
+        window?.showLoadingTilteActivity(text, position: position)
+    }
+    
+    func hideWaiting(){
+        window?.hideActivity();
     }
     
     
-    func showSuccess(text : String, autoRemove : Bool? = true){
-        SJProgressHUD.showSuccess(text, autoRemove: autoRemove!);
+    func showSuccess(text : String, position : String = "center", interval : CGFloat = 1.0){
+        window?.showMessageAndImage(text, image: UIImage(named: "hudSuccess"), interval: interval, position: position)
     }
     
-    func showError(text : String, autoRemove : Bool? = true){
-        SJProgressHUD.showError(text, autoRemove: autoRemove!);
+    func showError(text : String, position : String = "center", interval : CGFloat = 1.0){
+        window?.showMessageAndImage(text, image: UIImage(named: "hudError"), interval: interval, position: position)
     }
     
-    func showInfo(text : String, autoRemove : Bool? = true){
-        SJProgressHUD.showInfo(text, autoRemove: autoRemove!);
-    }
-    
-    func showText(text : String, autoRemove : Bool? = true){
-        SJProgressHUD.showOnlyText(text, autoRemove: autoRemove!);
-    }
-    
-    func dismissShow(){
-        SJProgressHUD.dismiss()
+    func showText(text : String, position : String = "center", interval : CGFloat = 1.0){
+        window?.showMessage(text, interval: interval, position: position);
     }
     
     override func loadRequestFail() {
-        super.loadRequestFail();
-        showError("网络错误");
+        
+        //延迟1秒 模拟加载时间 这里上拉刷新有个bug  说一要延迟1秒
+        let time: NSTimeInterval = 1.0
+        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
+        dispatch_after(delay, dispatch_get_main_queue(), {
+            
+            super.loadRequestFail();
+            
+            if self.isHaveData == true {
+                self.showError("网络加载失败")
+            }
+        });
     }
 
 }
+

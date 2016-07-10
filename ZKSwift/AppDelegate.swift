@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let rootVC = ZKTableViewController();
+        let rootVC = ZKRootTableViewController();
         let navVC = UINavigationController(rootViewController: rootVC );
         self.window?.rootViewController = navVC;
         self.window?.makeKeyAndVisible();
