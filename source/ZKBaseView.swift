@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ZKBaseView: UIView {
+public class ZKBaseView: UIView {
 
     /**
      移除所有的子组件
      */
-    func removeAllSubviews(){
+    public func removeAllSubviews(){
         for view in self.subviews {
             view.removeFromSuperview();
         }
@@ -24,7 +24,7 @@ class ZKBaseView: UIView {
      
      - returns: 中心点
      */
-    func getMiddlePoint() -> CGPoint {
+    public func getMiddlePoint() -> CGPoint {
         return CGPointMake(self.frame.size.width / 2.0, self.frame.size.height / 2.0);
     }
 
