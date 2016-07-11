@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "ZKSwift"
-s.version          = "1.0.0"
+s.version          = "1.1.0"
 s.summary          = "Swift MVC"
 s.description      = <<-DESC
 It is a marquee view used on iOS, which implement by Swift.
