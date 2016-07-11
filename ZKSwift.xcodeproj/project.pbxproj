@@ -120,7 +120,6 @@
 		3944E97A1D1A3A660052EF6C = {
 			isa = PBXGroup;
 			children = (
-				39D258A71D33CF3600727934 /* source */,
 				3944E9851D1A3A660052EF6C /* ZKSwift */,
 				3944E99A1D1A3A660052EF6C /* ZKSwiftTests */,
 				3944E9A51D1A3A660052EF6C /* ZKSwiftUITests */,
@@ -143,6 +142,7 @@
 		3944E9851D1A3A660052EF6C /* ZKSwift */ = {
 			isa = PBXGroup;
 			children = (
+				39637D791D2A0009002C1CCB /* base */,
 				39C047AF1D2CD0400053BD54 /* demo */,
 				3944E9861D1A3A660052EF6C /* AppDelegate.swift */,
 				3944E98D1D1A3A660052EF6C /* Assets.xcassets */,
@@ -190,7 +190,6 @@
 				39637D781D29FFC2002C1CCB /* baseHandler */,
 			);
 			name = base;
-			path = ZKSwift;
 			sourceTree = "<group>";
 		};
 		39637D7A1D2A0014002C1CCB /* baseView */ = {
@@ -276,14 +275,6 @@
 				392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */,
 			);
 			name = handler;
-			sourceTree = "<group>";
-		};
-		39D258A71D33CF3600727934 /* source */ = {
-			isa = PBXGroup;
-			children = (
-				39637D791D2A0009002C1CCB /* base */,
-			);
-			name = source;
 			sourceTree = "<group>";
 		};
 		3FC0C2709453317A36789D51 /* Pods */ = {
