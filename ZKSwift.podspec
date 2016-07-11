@@ -23,7 +23,7 @@ s.source_files = 'ZKSwift/*'
 # s.ios.exclude_files = 'Classes/osx'
 # s.osx.exclude_files = 'Classes/ios'
 # s.public_header_files = 'Classes/**/*.h'
-s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+s.frameworks = 'Foundation'
 
 s.dependency 'SwiftyJSON'
 s.dependency 'Alamofire', '~> 3.4'
