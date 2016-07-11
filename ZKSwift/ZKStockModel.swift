@@ -20,5 +20,5 @@ class ZKStockModel: D3Model {
     
     var stockname = "";
     
-
+    
 }

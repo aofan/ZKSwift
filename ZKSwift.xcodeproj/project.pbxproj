@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		392636A51D2A32AD004ABA72 /* ZKInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636A41D2A32AD004ABA72 /* ZKInformationModel.swift */; };
 		392636A71D2A3508004ABA72 /* ZKBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636A61D2A3508004ABA72 /* ZKBaseModel.swift */; };
-		392636A91D2A3E06004ABA72 /* ZKStockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636A81D2A3E06004ABA72 /* ZKStockModel.swift */; };
 		392636AB1D2A56D8004ABA72 /* ZKInformationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */; };
 		392636AD1D2A6080004ABA72 /* ZKBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */; };
 		392814E41D30FDE800C570C4 /* ZKHUDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392814E31D30FDE800C570C4 /* ZKHUDTableViewController.swift */; };
@@ -29,6 +28,7 @@
 		39560E041D2B587E0057A5FF /* ZKInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39560E031D2B587E0057A5FF /* ZKInformationTableViewCell.swift */; };
 		39637D7F1D2A02C5002C1CCB /* ZKAlamofireHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */; };
 		39765F161D32422600D4E387 /* ZKRootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39765F151D32422600D4E387 /* ZKRootTableViewController.swift */; };
+		3982B4EC1D339F3900995F34 /* ZKStockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3982B4EB1D339F3900995F34 /* ZKStockModel.swift */; };
 		399303B71D2F43810016DB72 /* ZKRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399303B61D2F43810016DB72 /* ZKRefreshTableViewController.swift */; };
 		399303B91D2F83750016DB72 /* ZKRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399303B81D2F83750016DB72 /* ZKRequestModel.swift */; };
 		39C047B61D2CD2560053BD54 /* ZKInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39C047B51D2CD2560053BD54 /* ZKInformationTableViewCell.xib */; };
@@ -56,7 +56,6 @@
 /* Begin PBXFileReference section */
 		392636A41D2A32AD004ABA72 /* ZKInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKInformationModel.swift; sourceTree = "<group>"; };
 		392636A61D2A3508004ABA72 /* ZKBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseModel.swift; sourceTree = "<group>"; };
-		392636A81D2A3E06004ABA72 /* ZKStockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZKStockModel.swift; path = ../ZKStockModel.swift; sourceTree = "<group>"; };
 		392636AA1D2A56D8004ABA72 /* ZKInformationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKInformationHandler.swift; sourceTree = "<group>"; };
 		392636AC1D2A6080004ABA72 /* ZKBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKBaseTableViewController.swift; sourceTree = "<group>"; };
 		392814E31D30FDE800C570C4 /* ZKHUDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKHUDTableViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		39637D7E1D2A02C5002C1CCB /* ZKAlamofireHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKAlamofireHandler.swift; sourceTree = "<group>"; };
 		396B7F16AAD91323598414EA /* Pods_ZKSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZKSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39765F151D32422600D4E387 /* ZKRootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKRootTableViewController.swift; sourceTree = "<group>"; };
+		3982B4EB1D339F3900995F34 /* ZKStockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKStockModel.swift; sourceTree = "<group>"; };
 		399303B61D2F43810016DB72 /* ZKRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKRefreshTableViewController.swift; sourceTree = "<group>"; };
 		399303B81D2F83750016DB72 /* ZKRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKRequestModel.swift; sourceTree = "<group>"; };
 		39C047B51D2CD2560053BD54 /* ZKInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKInformationTableViewCell.xib; sourceTree = "<group>"; };
@@ -263,8 +263,8 @@
 		39C047B31D2CD0710053BD54 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				392636A81D2A3E06004ABA72 /* ZKStockModel.swift */,
 				392636A41D2A32AD004ABA72 /* ZKInformationModel.swift */,
+				3982B4EB1D339F3900995F34 /* ZKStockModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -481,6 +481,7 @@
 				39765F161D32422600D4E387 /* ZKRootTableViewController.swift in Sources */,
 				392814E41D30FDE800C570C4 /* ZKHUDTableViewController.swift in Sources */,
 				395035C71D1F981F0075AFBA /* ZKTableViewController.swift in Sources */,
+				3982B4EC1D339F3900995F34 /* ZKStockModel.swift in Sources */,
 				393641271D2E33FA008A4860 /* ZKBaseView.swift in Sources */,
 				392636AD1D2A6080004ABA72 /* ZKBaseTableViewController.swift in Sources */,
 				39C047B81D2CE5570053BD54 /* ZKEstimatedTableViewController.swift in Sources */,
@@ -491,7 +492,6 @@
 				392636A51D2A32AD004ABA72 /* ZKInformationModel.swift in Sources */,
 				3944E9871D1A3A660052EF6C /* AppDelegate.swift in Sources */,
 				393641251D2E2470008A4860 /* ZKRequestTableViewController.swift in Sources */,
-				392636A91D2A3E06004ABA72 /* ZKStockModel.swift in Sources */,
 				39560E021D2B57710057A5FF /* ZKBaseTableViewCell.swift in Sources */,
 				399303B91D2F83750016DB72 /* ZKRequestModel.swift in Sources */,
 				392636AB1D2A56D8004ABA72 /* ZKInformationHandler.swift in Sources */,
