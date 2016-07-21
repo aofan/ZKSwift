@@ -11,11 +11,13 @@ import XWSwiftRefresh
 
 class ZKRefreshTableViewController: ZKBaseTableViewController {
     
+    var isWillDisappear = false;
+    
     private var _refreshHeaderView : XWRefreshNormalHeader?;
     var refreshHeaderView : XWRefreshNormalHeader?{
         get{
             if _refreshHeaderView == nil {
-                _refreshHeaderView = XWRefreshNormalHeader(target: self, action: #selector(ZKRefreshTableViewController.upPullLoadData));
+                _refreshHeaderView = XWRefreshNormalHeader(target: self, action: #selector(ZKRefreshTableViewController.downPlullLoadData));
             }
             return _refreshHeaderView;
         }
@@ -25,7 +27,7 @@ class ZKRefreshTableViewController: ZKBaseTableViewController {
     private var _refreshFooterView : XWRefreshAutoNormalFooter?;
     var refreshFooterView : XWRefreshAutoNormalFooter?{
         if _refreshFooterView == nil {
-            _refreshFooterView = XWRefreshAutoNormalFooter(target: self, action: #selector(ZKRefreshTableViewController.downPlullLoadData));
+            _refreshFooterView = XWRefreshAutoNormalFooter(target: self, action: #selector(ZKRefreshTableViewController.upPullLoadData));
         }
         return _refreshFooterView;
     }
@@ -37,14 +39,25 @@ class ZKRefreshTableViewController: ZKBaseTableViewController {
         self.tableView.footerView = refreshFooterView;
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated);
+        self.isWillDisappear = true;
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.isWillDisappear = false;
+    }
+    
     
     func upPullLoadData(){
-        self.loadListRequest();
+        if self.isWillDisappear {
+            return;
+        }
+        self.loadMoreListRequest();
     }
     
     func downPlullLoadData(){
-        print("================================================================================================")
-        self.loadMoreListRequest();
+        self.loadListRequest();
     }
     
     override func loadListRequest() {
