@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ZKAlamofireHandler: ZKBaseHandler {
+public class ZKAlamofireHandler: ZKBaseHandler {
     
     
     /**

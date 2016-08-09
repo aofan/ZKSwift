@@ -8,24 +8,24 @@
 
 import UIKit
 
-class ZKBaseTableViewController: UITableViewController {
+public class ZKBaseTableViewController: UITableViewController {
     
     /// 数据处理
     var baseDataHandler : ZKAlamofireHandler?;
     /// 数据源
-    var dataArray : Array<AnyObject>?;
+    public var dataArray : Array<AnyObject>?;
     /// 是否分组
-    var isGroup:Bool = false;
+    public var isGroup:Bool = false;
     /// 默认每页10条数据
-    var pageSize = 10;
+    public var pageSize = 10;
     /// 开始页 默认第一页开始的
-    var startPageNum = 1;
+    public var startPageNum = 1;
     /// 当前页页码
-    var pageNum = 1;
+    public var pageNum = 1;
     /// 是否第一次进行网络请求
-    var isFirstRequest = true;
+    public var isFirstRequest = true;
     /// 是否有数据
-    var isHaveData : Bool!{
+    public var isHaveData : Bool!{
         get{
             if self.dataArray?.count > 0 {
                 return true;
@@ -38,31 +38,31 @@ class ZKBaseTableViewController: UITableViewController {
     /**
      请求数据  要求子类实现
      */
-    func loadListRequest(){}
+    public func loadListRequest(){}
     /**
      请求更多数据  要求子类实现
      */
-    func loadMoreListRequest(){}
+    public func loadMoreListRequest(){}
     /**
      全部加载完成
      */
-    func loadAllFinish(){}
+    public func loadAllFinish(){}
     /**
      请求成功
      */
-    func loadRequestSuccess(){}
+    public func loadRequestSuccess(){}
     /**
      请求失败
      */
-    func loadRequestFail(){}
+    public func loadRequestFail(){}
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.pageNum = self.startPageNum;
     }
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //分组
         if isGroup {
@@ -86,7 +86,7 @@ class ZKBaseTableViewController: UITableViewController {
     }
     
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         //分组
         if isGroup {
             //有数据
@@ -102,7 +102,7 @@ class ZKBaseTableViewController: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let baseModel : ZKBaseModel? = self.indexPathForSource(indexPath);
         
@@ -110,7 +110,7 @@ class ZKBaseTableViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         self.didSelectCell(self.indexPathForSource(indexPath));
         
@@ -121,7 +121,7 @@ class ZKBaseTableViewController: UITableViewController {
      
      - parameter source: 数据模型
      */
-    func didSelectCell( source : ZKBaseModel ) {
+    public func didSelectCell( source : ZKBaseModel ) {
         self.cellEventHandler(source);
     }
     /**
@@ -132,7 +132,7 @@ class ZKBaseTableViewController: UITableViewController {
      - parameter target:    区分同一个cell上的不同事件的标志
      - parameter indexPath: 索引
      */
-    func cellEventHandler( source : ZKBaseModel, cell : ZKBaseTableViewCell? = nil, target : AnyObject? = nil, indexPath : NSIndexPath? = nil ){
+    public func cellEventHandler( source : ZKBaseModel, cell : ZKBaseTableViewCell? = nil, target : AnyObject? = nil, indexPath : NSIndexPath? = nil ){
         
     }
     

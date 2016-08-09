@@ -13,7 +13,7 @@ import UIKit
     func updateSourceForCell( source : AnyObject);
 }
 
-class ZKBaseTableViewCell: UITableViewCell, ZKBaseTableViewCellSource {
+public class ZKBaseTableViewCell: UITableViewCell, ZKBaseTableViewCellSource {
     /// 数据模型
     var source:AnyObject?{
         didSet
@@ -31,11 +31,11 @@ class ZKBaseTableViewCell: UITableViewCell, ZKBaseTableViewCellSource {
     
     
 
-    required override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    required override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
     }
     

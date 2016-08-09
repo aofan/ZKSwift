@@ -9,16 +9,16 @@
 import UIKit
 
 
-class ZKBaseHandler: NSObject {
+public class ZKBaseHandler: NSObject {
     
     /// 请求完成
-    typealias requestFinish = ()->Void;
+    public typealias requestFinish = ()->Void;
     
     /// 返回的模型数组
-    var dataArray : Array<AnyObject>?;
+    public var dataArray : Array<AnyObject>?;
     
     /// 网络请求返回结果
-    var requestResult : AlamofireRequestResult?;
+    public var requestResult : AlamofireRequestResult?;
 
 }
 
