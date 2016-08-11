@@ -62,6 +62,24 @@ public class ZKBaseTableViewController: UITableViewController {
     }
     
     
+    
+// MARK: - tableView数据展示的处理
+    
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        //分组
+        if isGroup {
+            //有数据
+            if (self.dataArray != nil) {
+                return (self.dataArray?.count)!;
+            }
+            //无数据
+            return 0;
+        }
+        
+        //不分组
+        return 1;
+    }
+    
     override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //分组
@@ -86,74 +104,12 @@ public class ZKBaseTableViewController: UITableViewController {
     }
     
     
-    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        //分组
-        if isGroup {
-            //有数据
-            if (self.dataArray != nil) {
-                return (self.dataArray?.count)!;
-            }
-            //无数据
-            return 0;
-        }
-        
-        //不分组
-        return 1;
-    }
-    
-    
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let baseModel : ZKBaseModel? = self.indexPathForSource(indexPath);
         
         return self.indexPathWithSourceForCell(indexPath, baseModel: baseModel);
         
-    }
-    
-    override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        self.didSelectCell(self.indexPathForSource(indexPath));
-        
-    }
-    
-    /**
-     cell 的整体点击事件  子类要想响应点击事件必须掉用此方法
-     
-     - parameter source: 数据模型
-     */
-    public func didSelectCell( source : ZKBaseModel ) {
-        self.cellEventHandler(source);
-    }
-    /**
-     cell 的事件处理  子类用到时候需要重写
-     
-     - parameter source:    数据模型
-     - parameter cell:      发生事件的cell
-     - parameter target:    区分同一个cell上的不同事件的标志
-     - parameter indexPath: 索引
-     */
-    public func cellEventHandler( source : ZKBaseModel, cell : ZKBaseTableViewCell? = nil, target : AnyObject? = nil, indexPath : NSIndexPath? = nil ){
-        
-    }
-    
-    /**
-     获取cell对应的模型
-     
-     - parameter indexPath: 索引
-     
-     - returns: 数据模型
-     */
-    private func indexPathForSource( indexPath : NSIndexPath) -> ZKBaseModel{
-        
-        var baseModel : ZKBaseModel?;
-        //是否分组来处理数据源
-        if self.isGroup {
-            baseModel = self.dataArray![indexPath.section][indexPath.row] as? ZKBaseModel;
-        }else{
-            baseModel = self.dataArray![indexPath.row] as? ZKBaseModel;
-        }
-        
-        return baseModel!;
     }
     
     /**
@@ -165,7 +121,7 @@ public class ZKBaseTableViewController: UITableViewController {
      - returns: cell
      */
     private func indexPathWithSourceForCell( indexPath : NSIndexPath, baseModel : ZKBaseModel?) -> ZKBaseTableViewCell{
-    
+        
         var cell : ZKBaseTableViewCell?;
         let reuseIdentifier = String(baseModel!.cellClass!);
         
@@ -194,4 +150,59 @@ public class ZKBaseTableViewController: UITableViewController {
         cell?.cellEventHandler = cellEventHandler;
         return cell!;
     }
+    
+    
+    
+// MARK: - cell的点击事件处理
+    
+    override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.didSelectCell(self.indexPathForSource(indexPath));
+        
+    }
+    
+    /**
+     cell 的整体点击事件  子类要想响应点击事件必须掉用此方法
+     
+     - parameter source: 数据模型
+     */
+    public func didSelectCell( source : ZKBaseModel ) {
+        self.cellEventHandler(source);
+    }
+    /**
+     cell 的事件处理  子类用到时候需要重写
+     
+     - parameter source:    数据模型
+     - parameter cell:      发生事件的cell
+     - parameter target:    区分同一个cell上的不同事件的标志
+     - parameter indexPath: 索引
+     */
+    public func cellEventHandler( source : ZKBaseModel, cell : ZKBaseTableViewCell? = nil, target : AnyObject? = nil, indexPath : NSIndexPath? = nil ){
+        
+    }
+    
+    
+    
+// MARK: - 根据cell获取数据模型
+    
+    /**
+     获取cell对应的模型
+     
+     - parameter indexPath: 索引
+     
+     - returns: 数据模型
+     */
+    private func indexPathForSource( indexPath : NSIndexPath) -> ZKBaseModel{
+        
+        var baseModel : ZKBaseModel?;
+        //是否分组来处理数据源
+        if self.isGroup {
+            baseModel = self.dataArray![indexPath.section][indexPath.row] as? ZKBaseModel;
+        }else{
+            baseModel = self.dataArray![indexPath.row] as? ZKBaseModel;
+        }
+        
+        return baseModel!;
+    }
+    
 }
