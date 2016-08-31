@@ -10,6 +10,9 @@ import UIKit
 
 class ZKRequestTableViewController: ZKHUDTableViewController {
     
+    /// 数据处理
+    var baseDataHandler : ZKAlamofireHandler?;
+    
     /// 是否正在加载数据
     var isLoading = false{
         didSet{

@@ -10,8 +10,6 @@ import UIKit
 
 public class ZKBaseTableViewController: UITableViewController {
     
-    /// 数据处理
-    var baseDataHandler : ZKAlamofireHandler?;
     /// 数据源
     public var dataArray : Array<AnyObject>?;
     /// 是否分组

@@ -15,6 +15,21 @@ class ZKTableViewController: ZKEstimatedTableViewController {
         self.isGroup = true;
         self.baseDataHandler = ZKInformationHandler();
         loadListRequest();
+        
+        clearBackBarButtonItemTitle()
+        
+        
+    }
+    
+    func clearBackBarButtonItemTitle(){
+        let returnButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZKTableViewController.backButtonClick))
+        
+        self.navigationItem.backBarButtonItem = returnButtonItem;
+        
+    }
+    
+    func backButtonClick() {
+        print("aaaaaaaaaaaaaa")
     }
     
     override func loadListRequest() {
